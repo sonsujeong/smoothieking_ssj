@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smoothieking main</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <script>
+      $(function(){
+ 
+
+  $(".hamburger").click(function(){
+        $(".hammenu").animate({marginRight:"300px"},300);
+      });
+
+
+      $(".cross").click(function(){
+        $(".hammenu").animate({marginRight:"0px"},300);
+      });
+    
+      $("#topbtn").click(function(){
+        $("html,body").animate({scrollTop:0},'slow');
+        return false;
+     });
+
+  
+  
+     $("#button ul li").on('click',function(){
+        
+        $("#button ul li").removeClass("on");
+        $(this).addClass("on");
+        
+        const btnName = $(this).text();
+       
+        $("#gallery div").each(function(){
+            
+            const liNum = $(this).index();
+            const imgAlt = $(this).attr("data-tags");
+            
+            if(btnName=="전체메뉴"){
+                $("#gallery div").fadeIn();
+            }else if(imgAlt==btnName){
+                $(this).fadeIn();
+            }else{
+                $(this).fadeOut();
+            };
+                
+        });
+
+    });
+
+});	
+    </script>
+
+</head>
+<body>
+    <header id="header" class="cf">  
+     <div class="center">    
+     <h1>
+       <a href="main.html"> <img src="img/brand_logo.png" alt="logo image"> </a>
+    </h1>
+     </div>
+    <button class="hamburger">
+        <img src="img/menuicon.png" alt="menuicon">
+    </button>
+    </header>
+
+
+ <nav class="hammenu">
+  
+    <ul>
+        <li class="color"><a href="brand.html">BRAND</a></li>
+
+        <li class="color"><a href="menu.html">OUR MENU</a></li>
+
+           <li class="color"><a href="franchise.html">FRANCHISE</a></li>  
+
+           <li class="color"><a href="event.html">EVENT</a></li>
+
+           <li class="color"><a href="customer.html">CUSTOMER SERVICE</a></li>
+   </ul>
+    <button class="cross">&#735;</button>
+   </nav>
+
+
+   <header id="header_pc">
+    <nav id="pcmenu">
+      <h1>
+        <a href="main.html"><img src="img/brand_logo.png" 
+        alt="main logo">
+    </a>
+    </h1>
+      <ul class="navi_pc cf">
+         
+        <li class="color"><a href="brand.html">BRAND</a></li>
+
+        <li class="color"><a href="menu.html">OUR MENU</a></li>
+
+           <li class="color"><a href="franchise.html">FRANCHISE</a></li>  
+
+           <li class="color"><a href="event.html">EVENT</a></li>
+
+           <li class="color"><a href="customer.html">CUSTOMER SERVICE</a></li>
+     </ul>
+     </nav>
+  </header>
+
+  <section id="head_mo">
+    <h2><img src="img/background_ta01.jpg" alt="image"></h2>
+    </section>
+    <section id="head_pc">
+      <h2><img src="img/background_pc01.jpg" alt="image"></h2>
+      </section>
+ <div class="line">
+  <img src="img/line02.png" alt="line image">
+ </div>
+
+ 
+  <div id="box" class="cf">
+    <div id="button">
+      <ul class="cf">
+        <li class="active first on">전체메뉴</li>
+        <li>FITNESS 스무디</li>
+        <li>SLIM 스무디</li>
+        <li>WELLNESS 스무디</li>
+        <li>TAKE A BREAK스무디</li>
+        <li>KIDS 스무디</li>
+        <li>블렌딩 주스</li>
+        <li>NON SMOOTHIE</li>
+        <li>FOOD</li>
+      </ul>
+    </div>
+     </div>
+  
+  
+  
+    <article id="gallery">
+      <div class="menu1 cf" data-tags="FITNESS 스무디"> 
+        <h3>FITNESS SMOOTHIE</h3>
+        <ul>
+     <li><img src="img/fitness01.jpg" alt="smoothie">
+    <p>하이프로틴 아몬드 바나나<br>
+     Protein Almond Banana</p></li>
+      <li><img src="img/fitness02.jpg"  alt="smoothie">
+        <p>하이프로틴 아몬드 모카<br>
+          Protein Almond Mocha</p></li>
+    <li><img src="img/fitness03.jpg"  alt="smoothie">
+            <p>린1 다크초코<br>
+              Lean1 Dark Chocolate</p></li>
+      <li><img src="img/fitness04.jpg"  alt="smoothie">
+                <p>린1 스트로베리<br>
+                  Lean1 Strawberry</p></li>
+     <li><img src="img/fitness05.jpg"  alt="smoothie">
+                    <p>글라디에이터 딸기 바나나<br>
+                      Gladiator berry Banana</p></li>
+   <li><img src="img/fitness06.jpg"  alt="smoothie">
+                        <p>글라디에이터 파인애플 망고<br>
+                          Gladiator Pineapple Mango</p></li>
+                          <li><img src="img/fitness07.jpg"  alt="smoothie">
+                            <p>피넛파워 플러스 다크초코<br>
+                              Peanut Power Plus Dark Chocolate</p></li>
+                              <li><img src="img/fitness08.jpg"  alt="smoothie">
+                                <p>피넛파워 플러스 스트로베리<br>
+                                  Peanut Power Plus Strawberry</p></li>
+      
+    </ul>
+    </div>
+
+    <div class="menu2 cf"  data-tags="SLIM 스무디">
+      <h3>SLIM SMOOTHIE</h3>
+      <ul>
+     <li> <img src="img/slim01.jpg"  alt="smoothie">
+    <p>슬림앤슬림 다크초코<br>slim $ slim Dark Chocolate</p></li>
+     <li> <img src="img/slim02.jpg"  alt="smoothie">
+      <p>슬림앤슬림 스트로베리<br>slim $ slim Strawberry</p></li>
+      </ul>
+    </div>
+
+    <div class="menu3 cf" data-tags="WELLNESS 스무디">
+      <h3>WELLNESS SMOOTHIE</h3>
+      <ul>
+      <li>
+       <img src="img/wellness01.jpg"  alt="smoothie">
+      <p>엔젤 푸드<br>Angel Food</p>
+      </li>
+      <li>
+        <img src="img/wellness02.jpg"  alt="smoothie">
+       <p>스트로베리 익스트림<br>Strawberry X-treme</p>
+       </li>
+       <li>
+        <img src="img/wellness03.jpg"  alt="smoothie">
+       <p>오렌지 레볼루션<br>Orange Revolution</p>
+       </li>
+       <li>
+        <img src="img/wellness04.jpg"  alt="smoothie">
+       <p>레몬 트위스트 스트로베리<br>Lemon Twist Strawberry</p>
+       </li>
+       <li>
+        <img src="img/wellness05.jpg"  alt="smoothie">
+       <p>오렌지 카밤<br>Orange Ka-bam</p>
+       </li>
+       <li>
+        <img src="img/wellness06.jpg"  alt="smoothie">
+       <p>망고 페스티벌<br>Mango Festival</p>
+       </li>
+       <li>
+        <img src="img/wellness07.jpg"  alt="smoothie">
+       <p>스트로베리 키스<br>Strawberry Kiss</p>
+       </li>
+       <li>
+        <img src="img/wellness08.jpg"  alt="smoothie">
+       <p>그릭요거트 스트로베리 블루베리<br>Strawberry Blueberry</p>
+       </li>
+       <li>
+        <img src="img/wellness09.jpg"  alt="smoothie">
+       <p>그릭요거트 파인애플 망고<br>Pineapple Mango</p>
+       </li>
+       <li>
+        <img src="img/wellness10.jpg"  alt="smoothie">
+       <p>애플 키위 케일<br>Apple Kiwi Kale</p>
+       </li>
+       <li>
+        <img src="img/wellness11.jpg" alt="smoothie">
+       <p>베리 캐롯<br>Berry Carrot</p>
+       </li>
+       <li>
+        <img src="img/wellness12.jpg"  alt="smoothie">
+       <p>캐롯 케일<br>Carrot Kale</p>
+       </li>
+    </ul>
+    </div>
+
+    <div class="menu4 cf"  data-tags="TAKE A BREAK스무디">
+      <h3>TAKE A BREAK SMOOTHIE</h3>
+      <ul>
+      <li>
+        <img src="img/take1.jpg"  alt="smoothie">
+       <p>골드키위 썬샤인<br>Gold Kiwi Sunshine</p>
+       </li>
+       <li>
+        <img src="img/take2.jpg"  alt="smoothie">
+       <p>베리 베리<br>Very berry</p>
+       </li>
+       <li>
+        <img src="img/take3.jpg"  alt="smoothie">
+       <p>바나나 아일랜드<br>Banana Island</p>
+       </li>
+       <li>
+        <img src="img/take4.jpg"  alt="smoothie">
+       <p>캐리비안 웨이<br>Caribbean Way</p>
+       </li>
+       <li>
+        <img src="img/take5.jpg"  alt="smoothie">
+       <p>체리 익스트림<br>Cherry X-treme</p>
+       </li>
+       <li>
+        <img src="img/take6.jpg"  alt="smoothie">
+       <p>삼삼 한라봉<br>Hallabong</p>
+       </li>
+       <li>
+        <img src="img/take7.jpg"  alt="smoothie">
+       <p>피치 슬라이스 플러스<br>Peach Slice Plus</p>
+       </li>
+       <li>
+        <img src="img/take8.jpg"  alt="smoothie">
+       <p>코코넛 서프라이즈<br>Coconut Surprise</p>
+       </li>
+       <li>
+        <img src="img/take9.jpg"  alt="smoothie">
+       <p>코코넛 피나콜라다<br>Coconut Pina Colada</p>
+       </li>
+       <li>
+        <img src="img/take10.jpg"  alt="smoothie">
+       <p>파인애플 서프<br>Pineapple Surf</p>
+       </li>
+      </ul>
+    </div>
+
+    <div class="menu5 cf"  data-tags="KIDS 스무디">
+      <h3>KIDS SMOOTHIE</h3>
+      <ul>
+        <li>
+          <img src="img/kids01.jpg"  alt="smoothie">
+         <p>타요 리틀 엔젤푸드</p>
+         </li>
+
+         <li>
+          <img src="img/kids02.jpg"  alt="smoothie">
+         <p>타요 리틀 캐리비안 웨이</p>
+         </li>
+
+         <li>
+          <img src="img/kids03.jpg"  alt="smoothie">
+         <p>타요 리틀 골드키위 썬샤인</p>
+         </li>
+
+         <li>
+          <img src="img/kids04.jpg"  alt="smoothie">
+         <p>로기 리틀 스트로베리 익스트림</p>
+         </li>
+      </ul>
+    </div>
+
+    <div class="menu6 cf"  data-tags="블렌딩 주스">
+      <h3>BLENDING JUICE</h3>
+     <ul>
+      <li>
+        <img src="img/blending01.jpg"  alt="smoothie">
+       <p>딸기 토마토 주스<br>Strawberry Tomato Juice</p>
+       </li>
+
+       <li>
+        <img src="img/blending02.jpg"  alt="smoothie">
+       <p>망고 딸기 주스<br>Mango Strawberry Juice</p>
+       </li>
+
+       <li>
+        <img src="img/blending03.jpg"  alt="smoothie">
+       <p>케일 캐롯 주스<br>Kale Carrot Juice</p>
+       </li>
+
+       <li>
+        <img src="img/blending04.jpg"  alt="smoothie">
+       <p>제주 한라봉 주스<br>Jeju Hallabong Juice</p>
+       </li>
+     </ul>
+    </div>
+
+    <div class="menu7 cf"  data-tags="NON SMOOTHIE">
+      <h3>NON-SMOOTHIE</h3>
+     <ul>
+      <li>
+        <img src="img/tea01.jpg"  alt="smoothie">
+       <p>아메리카노<br>Americano</p>
+       </li>
+
+       <li>
+        <img src="img/tea02.jpg"  alt="smoothie">
+       <p>카페라떼<br>Cafe Latte</p>
+       </li>
+
+       <li>
+        <img src="img/tea03.jpg"  alt="smoothie">
+       <p>초코라떼<br>Chocolate Latte</p>
+       </li>
+
+       <li>
+        <img src="img/tea04.jpg"  alt="smoothie">
+       <p>로네펠트 프루티<br>카모마일</p>
+       </li>
+
+       <li>
+        <img src="img/tea05.jpg"  alt="smoothie">
+       <p>로네펠트 리프레싱<br>민트</p>
+       </li>
+
+       <li>
+        <img src="img/tea06.jpg"  alt="smoothie">
+       <p>로네펠트 웰니스<br>루이보스&레몬그라스</p>
+       </li>
+
+       <li>
+        <img src="img/tea07.jpg"  alt="smoothie">
+       <p>로네펠트 아유베다<br>허브&진저</p>
+       </li>
+
+     </ul>
+    </div>
+
+    <div class="menu8 cf"  data-tags="FOOD">
+      <h3>FOOD</h3>
+      <ul>
+        <li>
+          <img src="img/food01.jpg"  alt="smoothie">
+         <p>비건 애플 크럼블 케익<br>Apple Crumble Cake</p>
+         </li>
+
+         <li>
+          <img src="img/food02.jpg"  alt="smoothie">
+         <p>비건 블루베리 크럼블 케익<br>Blueberry Crumble Cake</p>
+         </li>
+
+         <li>
+          <img src="img/food03.jpg"  alt="smoothie">
+         <p>비건 초콜릿칩 머핀<br>Vegan Choco Muffin</p>
+         </li>
+
+         <li>
+          <img src="img/food04.jpg"  alt="smoothie">
+         <p>치즈케익<br>Cheese Cake</p>
+         </li>
+
+         <li>
+          <img src="img/food05.jpg"  alt="smoothie">
+         <p>바질 그릴드 멜팅치즈<br>Basil Grilled Melting Cheese</p>
+         </li>
+
+         <li>
+          <img src="img/food06.jpg"  alt="smoothie">
+         <p>할라피뇨 그릴드 멜팅치즈<br>Jalapeno Grilled Melting Cheese</p>
+         </li>
+      </ul>
+    </div>
+
+
+    </article>
+     
+  
+  
+
+    <footer id="footer">
+      <div class="f_logo cf">
+      <img src="img/brand_logo.png" alt="logo">
+      </div>
+      <ul class="cf">
+        <li><a href="https://www.smoothieking-voc.co.kr/terms">이용약관</a></li>
+        <li><a href="https://www.smoothieking-voc.co.kr/privacy">개인정보처리방침</a></li>
+        <li><a href="customer.html">고객지원</a></li>
+        <li><a href="https://www.smoothieking-voc.co.kr/media">운영관리방침</a></li>
+        <li><a href="https://www.smoothieking-voc.co.kr/email_security">개인정보<br>무단수집거부</a></li>
+      </ul>
+
+      <address>본사 : (우)04793 서울 성동구 아차산로 5길7 7층 <br>(성수동2가, 아주디지털타워)  <br>사무실 : (우)04782 서울 성동구 성수일로56 11층 <br>(성수동2가, 백영성수센터)</address>
+        <p> TEL : 02-550-2300 / FAX : 02-550-2301 </p>
+         <p>Copyright © 2016 SMOOTHIEKING KOREA. ALL RIGHTS RESERVED</p>
+    </footer>
+
+
+    <div id="topbtn">
+      <img src="img/topicon.png" alt="top button">
+    </div>
+</body>
+</html>

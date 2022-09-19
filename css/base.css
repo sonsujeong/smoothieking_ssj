@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NGothic';
+    src: url(../font/NanumGothic.woff) format('woff'); 
+}
+/*폰트 이름은 영어로,글꼴파일을 woff로 변환(convertio)해서 폰트 폴더안에 넣어놓기*/
+@font-face {
+    font-family: 'NGothicEB';
+    src: url(../font/NanumGothicExtraBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'pretendard_regular';
+    src:url(../font/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'pretendard_bold';
+    src:url(../font/Pretendard-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'pretendard_semibold';
+    src:url(../font/Pretendard-SemiBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'pretendard_extrabold';
+    src:url(../font/Pretendard-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'pretendard_black';
+    src:url(../font/Pretendard-Black.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'pretendard_medium';
+    src:url(../font/Pretendard-Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'pretendard_extralight';
+    src:url(../font/Pretendard-ExtraLight.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'pretendard_light';
+    src:url(../font/Pretendard-Light.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'pretendard_thin';
+    src:url(../font/Pretendard-Thin.woff) format('woff');
+}
+

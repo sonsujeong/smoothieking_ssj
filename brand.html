@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smoothieking main</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <script>
+      $(function(){
+  $("ul.panel li:not("+$("ul.tab li a.selected").attr("href")+")").hide();
+
+  $("ul.tab li a").click(function(){
+	$("ul.tab li a").removeClass("selected");
+	$(this).addClass("selected");
+	$("ul.panel li").hide();
+	$($(this).attr("href")).show();
+	return false;
+  });
+
+  $(".hamburger").click(function(){
+        $(".hammenu").animate({marginRight:"300px"},300);
+      });
+
+
+      $(".cross").click(function(){
+        $(".hammenu").animate({marginRight:"0px"},300);
+      });
+    
+
+      $("#topbtn").click(function(){
+        $("html,body").animate({scrollTop:0},'slow');
+        return false;
+     });
+
+});	
+    </script>
+
+</head>
+<body>
+    <header id="header" class="cf">  
+     <div class="center">    
+     <h1>
+       <a href="main.html"> <img src="img/brand_logo.png" alt="logo image"> </a>
+    </h1>
+     </div>
+    <button class="hamburger">
+        <img src="img/menuicon.png" alt="menuicon">
+    </button>
+    </header>
+
+
+ <nav class="hammenu">
+  
+    <ul>
+        <li class="color"><a href="brand.html">BRAND</a></li>
+
+        <li class="color"><a href="menu.html">OUR MENU</a></li>
+
+           <li class="color"><a href="franchise.html">FRANCHISE</a></li>  
+
+           <li class="color"><a href="event.html">EVENT</a></li>
+
+           <li class="color"><a href="customer.html">CUSTOMER SERVICE</a></li>
+   </ul>
+    <button class="cross">&#735;</button>
+   </nav>
+
+
+   <header id="header_pc">
+    <nav id="pcmenu">
+      <h1>
+        <a href="main.html"><img src="img/brand_logo.png" 
+        alt="main logo">
+    </a>
+    </h1>
+      <ul class="navi_pc cf">
+         
+        <li class="color"><a href="brand.html">BRAND</a></li>
+
+        <li class="color"><a href="menu.html">OUR MENU</a></li>
+
+           <li class="color"><a href="franchise.html">FRANCHISE</a></li>  
+
+           <li class="color"><a href="event.html">EVENT</a></li>
+
+           <li class="color"><a href="customer.html">CUSTOMER SERVICE</a></li>
+     </ul>
+     </nav>
+  </header>
+
+  
+  <div id="container">
+   <ul class="tab">
+   <li><a href="#tab1" class="selected">브랜드 스토리</a></li>
+   <li><a href="#tab2">스무디 시크릿 노하우</a></li>
+   </ul>
+
+
+   <ul class="panel">
+   <li id="tab1">
+       <h2>Brand Story</h2>
+       <p class="p1">최초의 스무디! 스무디 오리지널리티의 시작 스무디킹의 역사는  1973년 미국 뉴올리언즈에서 시작되었습니다. </p>
+       <p class="p2">스티브 쿠노는 군 간호사 출신으로 본인의 알러지와 저혈당으로 먹거리를 고르는데 어려움을 겪었습니다. 개인의 지병을 해결하고자 칼로리는 낮고 영양학적으로 균형 잡힌 먹거리를 연구하여 과일에 비타민, 미네랄, 프로틴 등 영양소를 첨가한 스무디를 최초로 개발하고, 그 이름을 스무디(Smoothie)라고 칭하면서 그 역사가 시작되었습니다.</p> 
+
+       <img src="img/brand01.png" alt="history image">
+       <img src="img/brand02.png" alt="history image">
+
+       <img src="img/line01.png" alt="line">
+       <h3>스무디킹 코리아 히스토리</h3>
+        <p class="p3">스무디킹 코리아는 2003년5월, 제1호점인 명동점을 오픈하면서 국내에 최초로 스무디를 소개했습니다.<br><br>
+
+         미국의 다양한 스무디 메뉴 중 한국인에 맞는 메뉴를 선별하고, 개발하는 현지화 전략으로 시장을 성공적으로 공략했습니다.<br><br>
+         
+         스무디 한 잔에 과일은 물론 프로틴, 비타민 등의 영양소까지 함유하여 영양학적으로 균형 잡힌 스무디를 제공, 3년 만에 6배의 매출 신장세를 기록하는 등 젊은이들과 트렌드 세터로부터 전폭적인 사랑을 받는 브랜드로 성장하게 되었습니다.<br><br>
+         
+         특히, 명동 1호점은 2005년부터 2007년까지 3년 연속 매출 1위를 차지해 미국 본사에서 벤치마킹 하기도 했으며, 한국 진출 3년만인 2006년에 세계 600여 개 매장 가운데 매출 1위로 올라서는 기록을 세웠습니다.<br><br>
+         
+         2015년 12월 신세계푸드의 자회사로 편입된 스무디킹 코리아㈜는 스무디킹의 장점과 신세계푸드의 노하우를 결합해 베이커리, 주스 등 다양한 메뉴를 선보이고, 국내 최대 유통기업인 신세계그룹의 판매채널을 활용해 플래그십 매장 등 새로운 플랫폼을 구축하며 가맹점주와 함께 성장하는 상생 프랜차이즈의 대표 모델로 성장해 나가겠습니다.</p>
+             
+         <img src="img/line01.png" alt="line">
+        <div id="time">
+         <img src="img/timeline.png" alt="timeline">
+        </div>
+      </li>
+      
+      <li id="tab2">
+         <h2>스무디킹만의 시크릿 노하우</h2>
+         <img class="img1" src="img/ing01.png" alt="image">
+         <img class="img2" src="img/ing02.png" alt="image">
+         <img class="img3" src="img/ing03.png" alt="image">
+         <div class="line">
+          <img src="img/line02.png" alt="line image">
+         </div>
+         <div class="drink">
+          <img src="img/brand06.jpg" alt="drink">
+         </div>
+
+
+         <div class="line">
+          <img src="img/line02.png" alt="line image">
+         </div>
+      </li>
+   </ul>
+ </div>
+   
+
+
+
+         <div class="plant">
+          <img src="img/plant.png" alt="plant image">
+        </div>
+    
+        <div class="plant_pc">
+          <img src="img/plant2.png" alt="plant image">
+        </div>
+    
+
+    <footer id="footer">
+      <div class="f_logo cf">
+      <img src="img/brand_logo.png" alt="logo">
+      </div>
+      <ul class="cf">
+        <li><a href="https://www.smoothieking-voc.co.kr/terms">이용약관</a></li>
+         <li><a href="https://www.smoothieking-voc.co.kr/privacy">개인정보처리방침</a></li>
+         <li><a href="customer.html">고객지원</a></li>
+         <li><a href="https://www.smoothieking-voc.co.kr/media">운영관리방침</a></li>
+         <li><a href="https://www.smoothieking-voc.co.kr/email_security">개인정보<br>무단수집거부</a></li>
+      </ul>
+
+      <address>본사 : (우)04793 서울 성동구 아차산로 5길7 7층 <br>(성수동2가, 아주디지털타워)  <br>사무실 : (우)04782 서울 성동구 성수일로56 11층 <br>(성수동2가, 백영성수센터)</address>
+        <p> TEL : 02-550-2300 / FAX : 02-550-2301 </p>
+         <p>Copyright © 2016 SMOOTHIEKING KOREA. ALL RIGHTS RESERVED</p>
+    </footer>
+
+
+    <div id="topbtn">
+      <img src="img/topicon.png" alt="top button">
+    </div>
+</body>
+</html>

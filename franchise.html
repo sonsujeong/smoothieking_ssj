@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smoothieking main</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/franchise.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <script>
+      $(function(){
+ 
+
+  $(".hamburger").click(function(){
+        $(".hammenu").animate({marginRight:"300px"},300);
+      });
+
+
+      $(".cross").click(function(){
+        $(".hammenu").animate({marginRight:"0px"},300);
+      });
+    
+
+      $("#topbtn").click(function(){
+        $("html,body").animate({scrollTop:0},'slow');
+        return false;
+     });
+
+});	
+    </script>
+
+</head>
+<body>
+    <header id="header" class="cf">  
+     <div class="center">    
+     <h1>
+       <a href="main.html"> <img src="img/brand_logo.png" alt="logo image"> </a>
+    </h1>
+     </div>
+    <button class="hamburger">
+        <img src="img/menuicon.png" alt="menuicon">
+    </button>
+    </header>
+
+
+ <nav class="hammenu">
+  
+    <ul>
+        <li class="color"><a href="brand.html">BRAND</a></li>
+
+        <li class="color"><a href="menu.html">OUR MENU</a></li>
+
+           <li class="color"><a href="franchise.html">FRANCHISE</a></li>  
+
+           <li class="color"><a href="event.html">EVENT</a></li>
+
+           <li class="color"><a href="customer.html">CUSTOMER SERVICE</a></li>
+   </ul>
+    <button class="cross">&#735;</button>
+   </nav>
+
+
+   <header id="header_pc">
+    <nav id="pcmenu">
+      <h1>
+        <a href="main.html"><img src="img/brand_logo.png" 
+        alt="main logo">
+    </a>
+    </h1>
+      <ul class="navi_pc cf">
+         
+        <li class="color"><a href="brand.html">BRAND</a></li>
+
+        <li class="color"><a href="menu.html">OUR MENU</a></li>
+
+           <li class="color"><a href="franchise.html">FRANCHISE</a></li>  
+
+           <li class="color"><a href="event.html">EVENT</a></li>
+
+           <li class="color"><a href="customer.html">CUSTOMER SERVICE</a></li>
+     </ul>
+     </nav>
+  </header>
+
+  
+  <section id="fran_mo">
+    <h2><img src="img/fran_mo.jpg" alt="main image"></h2>
+    <div class="m1">
+      <h3>스무디킹 가맹안내</h3>
+      <img src="img/Group 3.png" alt="가맹안내">
+    </div>
+    <img class="line" src="img/line01.png" alt="line">
+    <div class="m2">
+      <h4>개설 절차</h4>
+      <img src="img/form.png" alt="개설절차">
+    </div>
+    <img class="line" src="img/line02.png" alt="line">
+    <div class="phone">
+    <img  src="img/phone.png" alt="가맹연락">
+  </div>
+  </section>
+
+  <section id="fran_pc">
+    <h2><img src="img/fran_pc.jpg" alt="main image"></h2>
+    <div class="p1">
+      <h3>스무디킹 가맹안내</h3>
+      <img src="img/Group 1.png" alt="가맹안내">
+    </div>
+    <img class="line" src="img/line01.png" alt="line">
+    <div class="p2">
+      <h4>개설 절차</h4>
+      <img src="img/form.png" alt="개설절차">
+    </div>
+    <img class="line" src="img/line02.png" alt="line">
+    <div class="phone">
+    <img  src="img/phone.png" alt="가맹연락">
+  </div>
+  </section>
+  
+    <footer id="footer">
+      <div class="f_logo cf">
+      <img src="img/brand_logo.png" alt="logo">
+      </div>
+      <ul class="cf">
+        <li><a href="https://www.smoothieking-voc.co.kr/terms">이용약관</a></li>
+         <li><a href="https://www.smoothieking-voc.co.kr/privacy">개인정보처리방침</a></li>
+         <li><a href="customer.html">고객지원</a></li>
+         <li><a href="https://www.smoothieking-voc.co.kr/media">운영관리방침</a></li>
+         <li><a href="https://www.smoothieking-voc.co.kr/email_security">개인정보<br>무단수집거부</a></li>
+      </ul>
+
+      <address>본사 : (우)04793 서울 성동구 아차산로 5길7 7층 <br>(성수동2가, 아주디지털타워)  <br>사무실 : (우)04782 서울 성동구 성수일로56 11층 <br>(성수동2가, 백영성수센터)</address>
+        <p> TEL : 02-550-2300 / FAX : 02-550-2301 </p>
+         <p>Copyright © 2016 SMOOTHIEKING KOREA. ALL RIGHTS RESERVED</p>
+    </footer>
+
+
+    <div id="topbtn">
+      <img src="img/topicon.png" alt="top button">
+    </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smoothieking main</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/customer.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <script>
+      $(function(){
+  $("ul.panel li:not("+$("ul.tab li a.selected").attr("href")+")").hide();
+
+  $("ul.tab li a").click(function(){
+	$("ul.tab li a").removeClass("selected");
+	$(this).addClass("selected");
+	$("ul.panel li").hide();
+	$($(this).attr("href")).show();
+	return false;
+  });
+
+  $(".hamburger").click(function(){
+        $(".hammenu").animate({marginRight:"300px"},300);
+      });
+
+
+      $(".cross").click(function(){
+        $(".hammenu").animate({marginRight:"0px"},300);
+      });
+    
+
+      $("#topbtn").click(function(){
+        $("html,body").animate({scrollTop:0},'slow');
+        return false;
+     });
+
+});	
+    </script>
+
+</head>
+<body>
+    <header id="header" class="cf">  
+     <div class="center">    
+     <h1>
+       <a href="main.html"> <img src="img/brand_logo.png" alt="logo image"> </a>
+    </h1>
+     </div>
+    <button class="hamburger">
+        <img src="img/menuicon.png" alt="menuicon">
+    </button>
+    </header>
+
+
+ <nav class="hammenu">
+  
+    <ul>
+        <li class="color"><a href="brand.html">BRAND</a></li>
+
+        <li class="color"><a href="menu.html">OUR MENU</a></li>
+
+           <li class="color"><a href="franchise.html">FRANCHISE</a></li>  
+
+           <li class="color"><a href="event.html">EVENT</a></li>
+
+           <li class="color"><a href="customer.html">CUSTOMER SERVICE</a></li>
+   </ul>
+    <button class="cross">&#735;</button>
+   </nav>
+
+
+   <header id="header_pc">
+    <nav id="pcmenu">
+      <h1>
+        <a href="main.html"><img src="img/brand_logo.png" 
+        alt="main logo">
+    </a>
+    </h1>
+      <ul class="navi_pc cf">
+         
+        <li class="color"><a href="brand.html">BRAND</a></li>
+
+        <li class="color"><a href="menu.html">OUR MENU</a></li>
+
+           <li class="color"><a href="franchise.html">FRANCHISE</a></li>  
+
+           <li class="color"><a href="event.html">EVENT</a></li>
+
+           <li class="color"><a href="customer.html">CUSTOMER SERVICE</a></li>
+     </ul>
+     </nav>
+  </header>
+
+  
+  <div id="container">
+   <ul class="tab">
+   <li><a href="#tab1" class="selected">제휴 안내</a></li>
+   <li><a href="#tab2">영양 성분표</a></li>
+   </ul>
+
+
+   <ul class="panel">
+   <li id="tab1">
+       <h2>스무디킹 제휴안내</h2>
+       <div class="info cf">
+       <img src="img/card_01.png" alt="제휴안내">
+       <img src="img/card_02.png" alt="제휴안내">
+       <img src="img/card_04.png" alt="제휴안내">
+       <img src="img/card_03.png" alt="제휴안내">
+       </div>
+       <div class="line">
+        <img src="img/dots.png" alt="line">
+       </div>
+       <div class="gg">
+        <h3>모바일쿠폰(기프티콘) 사용 불가 매장</h3>
+        <p class="g1"><strong>[서울/경기/인천]</strong><br> 마포일진빌딩점, 이대ECC점, 스타필드고양PK마켓점, 인천공항점, 파주프리미엄아울렛점, 영종대교휴게소점, 덕평자연휴게소점, 일산벨라시타점, 도이치오토월드점, CGV고양행신점, CGV부천점, CGV평촌점, CGV평택점</p>
+
+          <p class="g2"><strong>[기타]</strong><br> 신세계대구점, 대구이월드점, CGV대구스타디움점, 부산센텀점, 신세계김해점, 신세계마산점, 대명델피노점, 상록리조트점, 서천국립생태원점, CGV청주율량점, CGV목포평화광장점, CGV포항점, CGV광주금남로점, CGV제주점</p>
+          
+          <p class="g3"><strong>[특수매장]</strong><br>미군부대 입점매장, 전국 이마트24 편의점 입점매장</p>
+          
+          <p class="g4">※커피 미판매 / 커피쿠폰 사용불가 :스타필드고양PK마켓점, 천안신세계점, 울산롯데시네마점</p>
+       </div>
+      </li>
+      
+      <li id="tab2">
+         <h2>전체메뉴 영양성분</h2>
+        <img src="img/foodinfo.jpg" alt="전체메뉴 영양성분">
+      </li>
+   </ul>
+ </div>
+   
+
+
+
+         <div class="plant">
+          <img src="img/plant.png" alt="plant image">
+        </div>
+    
+        <div class="plant_pc">
+          <img src="img/plant2.png" alt="plant image">
+        </div>
+    
+
+    <footer id="footer">
+      <div class="f_logo cf">
+      <img src="img/brand_logo.png" alt="logo">
+      </div>
+      <ul class="cf">
+        <li><a href="https://www.smoothieking-voc.co.kr/terms">이용약관</a></li>
+         <li><a href="https://www.smoothieking-voc.co.kr/privacy">개인정보처리방침</a></li>
+         <li><a href="customer.html">고객지원</a></li>
+         <li><a href="https://www.smoothieking-voc.co.kr/media">운영관리방침</a></li>
+         <li><a href="https://www.smoothieking-voc.co.kr/email_security">개인정보<br>무단수집거부</a></li>
+      </ul>
+
+      <address>본사 : (우)04793 서울 성동구 아차산로 5길7 7층 <br>(성수동2가, 아주디지털타워)  <br>사무실 : (우)04782 서울 성동구 성수일로56 11층 <br>(성수동2가, 백영성수센터)</address>
+        <p> TEL : 02-550-2300 / FAX : 02-550-2301 </p>
+         <p>Copyright © 2016 SMOOTHIEKING KOREA. ALL RIGHTS RESERVED</p>
+    </footer>
+
+
+    <div id="topbtn">
+      <img src="img/topicon.png" alt="top button">
+    </div>
+</body>
+</html>
